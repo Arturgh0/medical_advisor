@@ -55,3 +55,11 @@ def SearchDoctor(request, speciality):
 
 
 # ------------------------------------------------------------------------------------------------------------
+
+class DoctorProfileView(generic.DetailView):
+    model = Doctor
+    template_name = 'website/doctor_profile.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
