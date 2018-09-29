@@ -7,5 +7,5 @@ urlpatterns = [
     path('appointment/create/', views.AppointmentCreateView.as_view(), name='create_appointment'),
     path('appointment/create/success', views.AppointmentCreateSuccessView.as_view(), name='create_appointment_success'),
     path('SearchDoctor/<slug:speciality>', views.SearchDoctor, name='SearchDoctor'),  # adicionado por João Pedro.
-    path('SearchDoctor/<slug:speciality>/profile', views.DoctorProfileView.as_view(), name='doctor_profile'),
+    path('SearchDoctor/<slug:speciality>/profile/<slug:object.crm>', views.DoctorProfileView.as_view(), name='doctor_profile'),
 ]
